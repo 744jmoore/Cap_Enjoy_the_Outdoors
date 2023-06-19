@@ -4,8 +4,6 @@ const Navigation = () => {
   return (
     <section>
       <ul>
-        <li><a href="">logo place holder</a></li>
-
         <li><a href="">Home Page</a></li>
 
         <li><a href="">National Parks</a></li>

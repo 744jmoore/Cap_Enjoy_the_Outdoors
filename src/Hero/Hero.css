@@ -13,7 +13,6 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    margin-top: 5em;
     padding-bottom: 15em;
   }
   
@@ -24,5 +23,5 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: black;
+    color: whitesmoke;
   }
