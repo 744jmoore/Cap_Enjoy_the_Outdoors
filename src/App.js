@@ -2,6 +2,8 @@
 //*import './App.css';*//
 import Navigation from './Navigation/Nav';
 import Hero from './Hero/Hero'
+import Aboutus from './AboutUs/Aboutus';
+
 function App() {
 
   return (
@@ -10,6 +12,7 @@ function App() {
       <section className="hero-section">
       <Hero />
       </section>
+      <Aboutus />
     </div>
   );
 }

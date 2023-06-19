@@ -8,9 +8,9 @@ const Hero = () => {
         <div class="hero-image">
             <div class="hero-text">
                 <h1>Find Your Park</h1>
-                <p>And I'm a Photographer</p>
-                <button>Hire me</button>
-                <button>Hire me</button>
+                <p>WELCOME!</p>
+                <button>Park Search</button>
+                <button>Mountain Search</button>
             </div>
         </div>
     );
