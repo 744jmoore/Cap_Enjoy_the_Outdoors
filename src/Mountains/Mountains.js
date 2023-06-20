@@ -4,6 +4,7 @@ import Toprated from "../Toprated/Toprated";
 import Navigation from "../Navigation/Nav";
 import Dropdown from "../Dropdown/Dropdown";
 import MountainCard from "./MountainCard";
+import "./Mountains.css";
 
 function Mountains() {
 

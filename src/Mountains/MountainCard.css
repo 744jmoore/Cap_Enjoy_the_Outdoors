@@ -3,4 +3,15 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
+    padding: 5%;
 }
+
+.MountainCardInfo img {
+    height:30vh;
+    width:50vh;
+ }
+
+ .MountainCardInfo p {
+    max-width: 35%;
+ }
