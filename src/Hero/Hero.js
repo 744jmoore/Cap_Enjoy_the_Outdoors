@@ -1,7 +1,6 @@
 import './Hero.css';
 
-
-const Hero = () => {
+const Hero = ({page, setPage}) => {
 
 
     return (
@@ -10,7 +9,7 @@ const Hero = () => {
                 <h1>Find Your Park</h1>
                 <p>WELCOME!</p>
                 <button>Park Search</button>
-                <button>Mountain Search</button>
+                <button onClick={() => setPage("mountains")}>Mountain Search</button>
             </div>
         </div>
     );
