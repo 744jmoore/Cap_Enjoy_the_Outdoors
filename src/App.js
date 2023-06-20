@@ -15,7 +15,6 @@ function App() {
       </section>
       <Aboutus />
       <Toprated />
-      {/* test comment */}
     </div>
   );
 }
