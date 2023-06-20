@@ -11,12 +11,12 @@ const Navigation = ({ page, setPage }) => {
           </a>
         </li>
 
-        <li>
+        <li >
           <a href="#">National Parks</a>
         </li>
 
-        <li>
-          <a href="#">Mountains Information</a>
+        <li onClick={() => setPage("mountains")}>
+          <a href="/mountains" onClick={(event) => event.preventDefault()}>Mountains Information</a>
         </li>
       </ul>
     </section>

@@ -1,7 +1,7 @@
 
-import Hero from './Hero/Hero'
-import Aboutus from './AboutUs/Aboutus';
-import Toprated from './Toprated/Toprated';
+import Hero from '../Hero/Hero'
+import Aboutus from '../AboutUs/Aboutus';
+import Toprated from '../Toprated/Toprated';
 
 
 function Home() {

@@ -4,14 +4,15 @@ import Hero from "./Hero/Hero";
 import Aboutus from "./AboutUs/Aboutus";
 import Toprated from "./Toprated/Toprated";
 import { useState } from "react";
-import Home from "./Home";
+import Home from "./Home/Home";
+import Mountains from "./Mountains/Mountains";
 
 function App() {
-  const [page, setPage] = useState("about");
+  const [page, setPage] = useState("home");
   const pages = { 
     home: <Home />,
-    about: <Aboutus />
-
+    mountains: <Mountains />
+ 
   };
 
   return (
