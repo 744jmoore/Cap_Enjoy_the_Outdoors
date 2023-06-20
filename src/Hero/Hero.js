@@ -5,8 +5,8 @@ const Hero = () => {
 
 
     return (
-        <div class="hero-image">
-            <div class="hero-text">
+        <div className="hero-image">
+            <div className="hero-text">
                 <h1>Find Your Park</h1>
                 <p>WELCOME!</p>
                 <button>Park Search</button>
