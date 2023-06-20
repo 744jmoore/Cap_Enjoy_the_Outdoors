@@ -3,6 +3,7 @@ import Aboutus from "../AboutUs/Aboutus";
 import Toprated from "../Toprated/Toprated";
 import Navigation from "../Navigation/Nav";
 import Dropdown from "../Dropdown/Dropdown";
+import MountainCard from "./MountainCard";
 
 function Mountains() {
 
@@ -16,6 +17,7 @@ function Mountains() {
           <button>Clear All</button>
         </div>
       </div>
+      <MountainCard />
     </div>
   );
 }
