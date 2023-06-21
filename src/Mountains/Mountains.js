@@ -5,19 +5,22 @@ import Navigation from "../Navigation/Nav";
 import Dropdown from "../Dropdown/Dropdown";
 import MountainCard from "./MountainCard";
 import "./Mountains.css";
+import { useState } from "react";
 
 function Mountains() {
 
+  const [mountain, setMountain] = useState("Bondcliff")
+  console.log(mountain);
   return (
     <div className="Mountains">
       <div className="hero-image">
         <div className="hero-text">
           <h1>Explore Mountains</h1>
-          <Dropdown />
+          <Dropdown mountain = {mountain} setMountain={setMountain}/>
 
         </div>
       </div>
-      <MountainCard />
+      <MountainCard mountain={mountain} setMountain={setMountain}/>
     </div>
   );
 }

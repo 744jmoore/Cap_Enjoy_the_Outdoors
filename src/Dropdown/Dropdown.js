@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import MountainCard from "../Mountains/MountainCard";
 
-function Dropdown() {
+function Dropdown({mountain, setMountain}) {
   
     const [data, setData] = useState([]);
   function getData() {
@@ -12,21 +12,17 @@ function Dropdown() {
       })
       .then((response) => {
         setData(response);
-        console.log(data.mountains)
       });
   }
   useEffect(() => {
     getData();
   }, []);
 
-  const [mountain, setMountain] = useState("Pick a Mountain!")
   const handleChange = (event) => {setMountain(event.target.value)
     let pickedMountain = (event.target.value)
 
   }
-  console.log(mountain)
-
-
+  
     return (
         <form className="mountain-picker">
           <select placeholder="Pick a Mountain" onChange={handleChange}>
