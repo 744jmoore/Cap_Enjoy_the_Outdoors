@@ -1,48 +1,27 @@
 import { useState, useEffect } from "react";
 import "./NationalParks.css";
+import ParksTable from "../ParksTable/ParksTable";
+
 
 const NationalParks = () => {
-  const [parks, setParks] = useState([]);
-  useEffect(() => {
-    fetch("./nationalparks.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((response) => {
-        setParks(response.parks);
-      });
-  }, []);
+  
+ const [renderParks, setRenderParks] = useState(false); 
 
-  // console.log(parks)
+ const handleClick = () => {
+  setRenderParks(!renderParks)
+ }
 
   return (
     <div className="Mountains">
       <div className="hero-image">
         <div className="hero-text">
           <h1>Explore Parks</h1>
-          <button>View all Parks</button>
+           
+           {renderParks ? <button onClick={(handleClick)}>Hide Results</button> 
+           : <button onClick={(handleClick)}>View all Parks</button>}
         </div>
       </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Location Name</th>
-              <th>City</th>
-              <th>State</th>
-              <th>Address</th>
-            </tr>
-          </thead>
-          <tbody>
-            {parks.map((park) => (
-              <tr key={park.LocationID}>
-                <td>{park.LocationName}</td>
-                <td>{park.City}</td>
-                <td>{park.State}</td>
-                <td>{park.Address}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {renderParks ? <ParksTable />  : null}
     </div>
   );
 };
