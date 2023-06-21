@@ -10,14 +10,14 @@ import Mountains from "./Mountains/Mountains";
 function App() {
   const [page, setPage] = useState("home");
   const pages = { 
-    home: <Home />,
+    home: <Home page={page} setPage={setPage}/>,
     mountains: <Mountains />
  
   };
 
   return (
     <div className="App">
-      <Hero page={page} setPage={setPage} />
+      
       <Navigation page={page} setPage={setPage} />
       {pages[page]}
     </div>

@@ -4,16 +4,17 @@ import Aboutus from '../AboutUs/Aboutus';
 import Toprated from '../Toprated/Toprated';
 
 
-function Home() {
+function Home({page, setPage}) {
 
 return (
     <div className="Home">
 
       <section className="hero-section">
-      <Hero />
+      <Hero page={page} setPage={setPage}/>
       </section>
       <Aboutus />
       <Toprated />
+     
     </div>
   );
 }
