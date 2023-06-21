@@ -1,7 +1,6 @@
 import "./Nav.css";
 
 const Navigation = ({ page, setPage }) => {
-  
   return (
     <section>
       <ul>
@@ -11,12 +10,16 @@ const Navigation = ({ page, setPage }) => {
           </a>
         </li>
 
-        <li >
-          <a href="#">National Parks</a>
+        <li onClick={() => setPage("nationalParks")}>
+          <a href="/nationalParks" onClick={(event) => event.preventDefault()}>
+            National Parks
+          </a>
         </li>
 
         <li onClick={() => setPage("mountains")}>
-          <a href="/mountains" onClick={(event) => event.preventDefault()}>Mountains Information</a>
+          <a href="/mountains" onClick={(event) => event.preventDefault()}>
+            Mountains Information
+          </a>
         </li>
       </ul>
     </section>

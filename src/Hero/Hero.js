@@ -8,7 +8,7 @@ const Hero = ({page, setPage}) => {
             <div className="hero-text">
                 <h1>Find Your Park</h1>
                 <p>WELCOME!</p>
-                <button>Park Search</button>
+                <button onClick={() => setPage("nationalParks")}>Park Search</button>
                 <button onClick={() => setPage("mountains")}>Mountain Search</button>
             </div>
         </div>
