@@ -3,26 +3,23 @@ import { useState, useEffect } from "react";
 
 const MountainCard = ({mountain}) => {
 
-    const [data, setData] = useState([]);
-    function getData() {
+    const [mountains, setMountains] = useState([]);
+    
+    useEffect(() => {
         fetch("./mountains.json")
             .then((response) => {
                 return response.json();
             })
             .then((response) => {
-                setData(response)
+                setMountains(response.mountains)
             });
-    }
-    useEffect(() => {
-        getData();
     }, []);
-
-    const testMountain = {mountain}
-    console.log(testMountain);
+    const filteredMountains = mountains.filter(mountainItem => mountainItem.name === mountain)
+        console.log({filteredMountains, mountains, mountain})
     return (
         
         <>
-            {data.mountains && data.mountains.map && data.mountains.filter(mountain => mountain.name===testMountain).map(filteredMountain => (
+            {filteredMountains.map(filteredMountain => (
                 <div className="MountainCardInfo" key={filteredMountain.name}>
                     <img src={'./pics/' + filteredMountain.img} alt={filteredMountain.name} />
                     <h3>{filteredMountain.name}</h3>

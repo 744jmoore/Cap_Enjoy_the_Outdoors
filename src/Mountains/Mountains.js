@@ -1,7 +1,4 @@
-import Hero from "../Hero/Hero";
-import Aboutus from "../AboutUs/Aboutus";
-import Toprated from "../Toprated/Toprated";
-import Navigation from "../Navigation/Nav";
+
 import Dropdown from "../Dropdown/Dropdown";
 import MountainCard from "./MountainCard";
 import "./Mountains.css";
@@ -9,7 +6,7 @@ import { useState } from "react";
 
 function Mountains() {
 
-  const [mountain, setMountain] = useState("Bondcliff")
+  const [mountain, setMountain] = useState('')
   console.log(mountain);
   return (
     <div className="Mountains">

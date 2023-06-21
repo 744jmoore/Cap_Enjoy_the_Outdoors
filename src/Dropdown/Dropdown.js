@@ -1,6 +1,6 @@
 //*import './App.css';*//
 import { useState, useEffect } from "react";
-import MountainCard from "../Mountains/MountainCard";
+
 
 function Dropdown({mountain, setMountain}) {
   
@@ -18,7 +18,8 @@ function Dropdown({mountain, setMountain}) {
     getData();
   }, []);
 
-  const handleChange = (event) => {setMountain(event.target.value)
+  const handleChange = (event) => {
+    setMountain(event.target.value)
     let pickedMountain = (event.target.value)
 
   }
