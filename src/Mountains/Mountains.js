@@ -14,8 +14,7 @@ function Mountains() {
         <div className="hero-text">
           <h1>Explore Mountains</h1>
           <Dropdown />
-          <button>View Information</button>
-          <button>Clear All</button>
+
         </div>
       </div>
       <MountainCard />
