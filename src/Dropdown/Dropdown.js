@@ -1,6 +1,5 @@
-//*import './App.css';*//
 import { useState, useEffect } from "react";
-
+import "./Dropdown.css";
 
 function Dropdown({mountain, setMountain}) {
   
@@ -20,8 +19,6 @@ function Dropdown({mountain, setMountain}) {
 
   const handleChange = (event) => {
     setMountain(event.target.value)
-    let pickedMountain = (event.target.value)
-
   }
   
     return (
