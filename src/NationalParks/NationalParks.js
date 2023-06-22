@@ -7,7 +7,7 @@ import ParksLocationTable from "../ParksLocationTable/ParksLocationTable";
 const NationalParks = () => {
   const [renderParks, setRenderParks] = useState(false);
   const [location, setLocation] = useState([]);
-
+  const [locationSelected, setLocationSelected] = useState("")
   const handleClick = () => {
     setRenderParks(!renderParks);
   };
@@ -22,12 +22,12 @@ const NationalParks = () => {
           ) : (
             <div>
               <button onClick={handleClick}>View all Parks</button> <br />
-              <ParksFilter location={location} setLocation={setLocation}/>
+              <ParksFilter location={location} setLocation={setLocation} setLocationSelected={setLocationSelected} locationSelected={locationSelected}/>
             </div>
           )}
         </div>
       </div>
-      <ParksLocationTable location={location} setLocation={setLocation} />      
+      {locationSelected ? <ParksLocationTable locationSelected={locationSelected} setLocationSelected={setLocationSelected} /> : null}      
    
       {renderParks ? <ParksTable /> : null}
     </div>

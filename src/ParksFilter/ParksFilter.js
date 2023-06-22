@@ -1,9 +1,7 @@
 import "./ParksFilter.css"
 import { useState, useEffect } from "react";
 
-const ParksFilter = ({location, setLocation}) => {
-    
-    // const [location, setLocation] = useState([]);
+const ParksFilter = ({location, setLocation, locationSelected, setLocationSelected }) => {
 
     useEffect(() => {
       fetch("./locations.json")
@@ -17,13 +15,9 @@ const ParksFilter = ({location, setLocation}) => {
 
 
     const handleChange = (event) => {
-        setLocation(event.target.value)
-        console.log(event.target.value)
+      console.log(event.target.value)  
+      setLocationSelected(event.target.value)
          }
-        
-
-    /* //*mountains.filter(mountainItem => mountainItem.name === mountain)
-        console.log({filteredMountains, mountains, mountain})*/
 
     return ( 
         <form className="parks-filter">

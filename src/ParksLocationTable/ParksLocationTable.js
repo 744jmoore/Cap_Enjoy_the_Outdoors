@@ -1,8 +1,9 @@
 import "./ParksLocationTable.css";
 import { useState, useEffect } from "react";
 
-const ParksLocationTable = ({location, setLocation}) => {
+const ParksLocationTable = ({locationSelected, setLocationSelected}) => {
   const [parks, setParks] = useState([]);
+  const [filteredParkLocations, setFilteredParkLocations] = useState({});
   useEffect(() => {
     fetch("./nationalparks.json")
       .then((response) => {
@@ -10,16 +11,18 @@ const ParksLocationTable = ({location, setLocation}) => {
       })
       .then((response) => {
         setParks(response.parks);
-      });
-  }, []);
+        setFilteredParkLocations(response.parks.filter(locationItem => locationItem.State === locationSelected))
+/*       console.log(response.parks.filter(locationItem => locationItem.State === locationSelected))
+        console.log(locationSelected);
+        console.log(response.parks); */
+    });
+  }, [locationSelected]);
 
-const filteredParkLocations = parks.filter(locationItem => locationItem.State === {location})
-console.log({filteredParkLocations, location})
-
+// const filteredParkLocations = parks.filter(locationItem => locationItem.State === "FLorida")
 
   return (
     <div className="table-container">
-        <table>
+        {filteredParkLocations && filteredParkLocations[0]? <table>
         <thead>
             <tr>
             <th>Location Name</th>
@@ -38,7 +41,7 @@ console.log({filteredParkLocations, location})
             </tr>
             ))}
         </tbody>
-        </table>
+        </table> : null}
     </div>
   );
 };
