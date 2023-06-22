@@ -3,6 +3,7 @@ import "./NationalParks.css";
 import ParksTable from "../ParksTable/ParksTable";
 import ParksFilter from "../ParksFilter/ParksFilter";
 import ParksLocationTable from "../ParksLocationTable/ParksLocationTable";
+import Toprated from "../Toprated/Toprated";
 
 const NationalParks = () => {
   const [renderParks, setRenderParks] = useState(false);
@@ -30,6 +31,9 @@ const NationalParks = () => {
       {locationSelected ? <ParksLocationTable locationSelected={locationSelected} setLocationSelected={setLocationSelected} /> : null}      
    
       {renderParks ? <ParksTable /> : null}
+      <div className="Toprated">
+        <Toprated />
+      </div>
     </div>
   );
 };

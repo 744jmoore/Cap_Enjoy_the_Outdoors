@@ -1,4 +1,5 @@
 import "./Rating.css";
+import StarRating from "../StarRating/StarRating";
 
 const Rating = () => {
   return (
@@ -6,7 +7,7 @@ const Rating = () => {
       <img alt="placeholder"></img>
       <h3>Park Name</h3>
       <p>Review description</p>
-      <p>Star Rating Placeholder</p>
+      <StarRating rating={5}/>
     </div>
   );
 }
