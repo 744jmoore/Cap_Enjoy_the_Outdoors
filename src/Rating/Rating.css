@@ -1,3 +1,11 @@
-.Rating {
-    max-width: 20%;
+.Rating img {
+   max-width: 20vh;
+}
+
+.RatingContainer {
+    max-width: 95%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }

@@ -1,5 +1,6 @@
 
 import Dropdown from "../Dropdown/Dropdown";
+import Toprated from "../Toprated/Toprated";
 import MountainCard from "./MountainCard";
 import "./Mountains.css";
 import { useState } from "react";
@@ -18,6 +19,7 @@ function Mountains() {
         </div>
       </div>
       <MountainCard mountain={mountain} setMountain={setMountain}/>
+      <Toprated />
     </div>
   );
 }
