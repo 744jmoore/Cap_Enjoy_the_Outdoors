@@ -2,33 +2,16 @@ import { useState, useEffect } from "react";
 import "./NationalParks.css";
 import ParksTable from "../ParksTable/ParksTable";
 import ParksFilter from "../ParksFilter/ParksFilter";
+import ParksLocationTable from "../ParksLocationTable/ParksLocationTable";
 
 const NationalParks = () => {
   const [renderParks, setRenderParks] = useState(false);
+  const [location, setLocation] = useState([]);
 
   const handleClick = () => {
     setRenderParks(!renderParks);
   };
 
-  const [location, setLocation] = useState([]);
-
-  useEffect(() => {
-    fetch("./locations.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((response) => {
-        setLocation(response);
-      });
-  }, []);
-  console.log(location);
-//LEFT OFF HERE ON 6/21//
-  const option = location.map((item) => {
-    <option>{item}</option>;
-    console.log(item);
-  });
-
-  console.log(option);
   return (
     <div className="Mountains">
       <div className="hero-image">
@@ -39,22 +22,13 @@ const NationalParks = () => {
           ) : (
             <div>
               <button onClick={handleClick}>View all Parks</button> <br />
-              <button>Search by Location</button>
+              <ParksFilter location={location} setLocation={setLocation}/>
             </div>
           )}
         </div>
       </div>
-
-      <form className="parks-filter">
-        <select placeholder="Filter">
-          <option disabled="">Select One</option>
-          {location.map((item) => {
-            {item===undefined<option>{item}</option>;
-            console.log(item);
-          })}
-        </select>
-      </form>
-
+      <ParksLocationTable location={location} setLocation={setLocation} />      
+   
       {renderParks ? <ParksTable /> : null}
     </div>
   );
