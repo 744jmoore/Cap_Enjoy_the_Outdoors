@@ -6,19 +6,19 @@ const RatingParks = () => {
 
   const topRatedData = [
     {
-      img: 'pics/NH.png',
+      img: 'pics/NH.jpg',
       parkName: 'New Hampshire',
       review: 'Excellent accomodations and the trails were great too!!',
       rating: 5,
     },
     {
-      img: 'pics/California.png',
+      img: 'pics/California.jpg',
       parkName: 'California',
       review: 'This was a wonderful place for the whole family.',
       rating: 5,
     },
     {
-      img: 'pics/Florida.png',
+      img: 'pics/Florida.jpg',
       parkName: 'Florida',
       review: 'My children love this place! We will be back soon!',
       rating: 4,
