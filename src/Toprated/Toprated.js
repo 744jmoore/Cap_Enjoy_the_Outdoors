@@ -1,7 +1,6 @@
 import "./Toprated.css";
 import Rating from "../Rating/Rating";
 
-
 const Toprated = () => {
   return (
     <div className="Toprated">
@@ -9,7 +8,6 @@ const Toprated = () => {
       <div className="Park-rating">
         <Rating />
       </div>
-     
     </div>
   );
 };

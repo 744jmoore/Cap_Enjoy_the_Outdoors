@@ -15,26 +15,26 @@ const ParksTable = () => {
 
   return (
     <div className="table-container">
-        <table>
+      <table>
         <thead>
-            <tr>
+          <tr>
             <th>Location Name</th>
             <th>City</th>
             <th>State</th>
             <th>Address</th>
-            </tr>
+          </tr>
         </thead>
         <tbody>
-            {parks.map((park) => (
+          {parks.map((park) => (
             <tr key={park.LocationID}>
-                <td>{park.LocationName}</td>
-                <td>{park.City}</td>
-                <td>{park.State}</td>
-                <td>{park.Address}</td>
+              <td>{park.LocationName}</td>
+              <td>{park.City}</td>
+              <td>{park.State}</td>
+              <td>{park.Address}</td>
             </tr>
-            ))}
+          ))}
         </tbody>
-        </table>
+      </table>
     </div>
   );
 };
