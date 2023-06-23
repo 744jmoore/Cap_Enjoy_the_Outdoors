@@ -12,7 +12,7 @@ function App() {
     mountains: <Mountains />,
     nationalParks: <NationalParks />
   };
-
+  
   return (
     <div className="App">
       

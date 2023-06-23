@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./NationalParks.css";
 import ParksTable from "../ParksTable/ParksTable";
 import ParksFilter from "../ParksFilter/ParksFilter";
 import ParksLocationTable from "../ParksLocationTable/ParksLocationTable";
-import Toprated from "../Toprated/Toprated";
+
+import RatingParks from "../Rating/RatingParks";
 
 const NationalParks = () => {
   const [renderParks, setRenderParks] = useState(false);
   const [location, setLocation] = useState([]);
-  const [locationSelected, setLocationSelected] = useState("")
+  const [locationSelected, setLocationSelected] = useState("");
   const handleClick = () => {
     setRenderParks(!renderParks);
   };
@@ -23,16 +24,27 @@ const NationalParks = () => {
           ) : (
             <div>
               <button onClick={handleClick}>View all Parks</button> <br />
-              <ParksFilter location={location} setLocation={setLocation} setLocationSelected={setLocationSelected} locationSelected={locationSelected}/>
+              <ParksFilter
+                location={location}
+                setLocation={setLocation}
+                setLocationSelected={setLocationSelected}
+                locationSelected={locationSelected}
+              />
             </div>
           )}
         </div>
       </div>
-      {locationSelected ? <ParksLocationTable locationSelected={locationSelected} setLocationSelected={setLocationSelected} /> : null}      
-   
+      {locationSelected ? (
+        <ParksLocationTable
+          locationSelected={locationSelected}
+          setLocationSelected={setLocationSelected}
+        />
+      ) : null}
+
       {renderParks ? <ParksTable /> : null}
       <div className="Toprated">
-        <Toprated />
+        <h2>Explore Top Rated Parks</h2>
+        <RatingParks />
       </div>
     </div>
   );
