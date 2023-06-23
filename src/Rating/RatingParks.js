@@ -1,4 +1,4 @@
-import "./RatingParks.css";
+import './RatingParks.css';
 import StarRating from "../StarRating/StarRating";
 
 
@@ -32,7 +32,7 @@ const RatingParks = () => {
   ];
 
   return (
-    <div className="Rating-Container">
+    <div className="RatingContainer">
     {topRatedData.map(rating => (
     <div key={rating.img} className="Rating">  
                 <img src={rating.img} alt={rating.parkName}/>

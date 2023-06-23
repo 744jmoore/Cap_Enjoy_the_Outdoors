@@ -42,8 +42,9 @@ const NationalParks = () => {
       ) : null}
 
       {renderParks ? <ParksTable /> : null}
-      <div className="Toprated">
-        <h2>Explore Top Rated Parks</h2>
+      <div></div>
+      <h2>Explore Top Rated Parks</h2>
+      <div className="Park-rating">
         <RatingParks />
       </div>
     </div>
